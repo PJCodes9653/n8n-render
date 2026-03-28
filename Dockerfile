@@ -1,7 +1,7 @@
 FROM n8nio/n8n:latest
 
 USER root
-RUN apk add --no-cache tzdata
+RUN apt-get update && apt-get install -y tzdata
 ENV TZ=Asia/Kolkata
 
 USER node
